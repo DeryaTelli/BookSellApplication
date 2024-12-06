@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBookStock = new System.Windows.Forms.Button();
             this.panelNav = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
@@ -108,15 +109,34 @@
             this.panel2.Controls.Add(this.btnAddUser);
             this.panel2.Controls.Add(this.btnAnalytic);
             this.panel2.Controls.Add(this.btnDashboard);
+            this.panel2.Controls.Add(this.btnBookStock);
             this.panel2.Location = new System.Drawing.Point(3, 146);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(206, 304);
             this.panel2.TabIndex = 3;
             // 
+            // btnBookStock
+            // 
+            this.btnBookStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBookStock.FlatAppearance.BorderSize = 0;
+            this.btnBookStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookStock.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookStock.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnBookStock.Image = global::BookSellApplication.Properties.Resources.books_8798348__1_;
+            this.btnBookStock.Location = new System.Drawing.Point(0, 0);
+            this.btnBookStock.Name = "btnBookStock";
+            this.btnBookStock.Size = new System.Drawing.Size(206, 40);
+            this.btnBookStock.TabIndex = 11;
+            this.btnBookStock.Text = "Book Stock";
+            this.btnBookStock.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBookStock.UseVisualStyleBackColor = true;
+            this.btnBookStock.Click += new System.EventHandler(this.button1_Click);
+            this.btnBookStock.Leave += new System.EventHandler(this.btnBookStock_Leave);
+            // 
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panelNav.Location = new System.Drawing.Point(0, 11);
+            this.panelNav.Location = new System.Drawing.Point(0, 28);
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(3, 100);
             this.panelNav.TabIndex = 3;
@@ -147,7 +167,7 @@
             this.btnAddUser.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAddUser.Image = global::BookSellApplication.Properties.Resources.add_friend_2198060__1_;
-            this.btnAddUser.Location = new System.Drawing.Point(0, 80);
+            this.btnAddUser.Location = new System.Drawing.Point(0, 120);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(206, 40);
             this.btnAddUser.TabIndex = 8;
@@ -165,7 +185,7 @@
             this.btnAnalytic.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalytic.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAnalytic.Image = global::BookSellApplication.Properties.Resources.line_chart_15265966__1_;
-            this.btnAnalytic.Location = new System.Drawing.Point(0, 40);
+            this.btnAnalytic.Location = new System.Drawing.Point(0, 80);
             this.btnAnalytic.Name = "btnAnalytic";
             this.btnAnalytic.Size = new System.Drawing.Size(206, 40);
             this.btnAnalytic.TabIndex = 4;
@@ -183,7 +203,7 @@
             this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnDashboard.Image = global::BookSellApplication.Properties.Resources.home_9449212__1_;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 40);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(206, 40);
             this.btnDashboard.TabIndex = 3;
@@ -241,5 +261,6 @@
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Panel pnlFormLoader;
+        private System.Windows.Forms.Button btnBookStock;
     }
 }

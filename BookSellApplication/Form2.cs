@@ -155,5 +155,23 @@ namespace BookSellApplication
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelNav.Height=btnBookStock.Height;
+            panelNav.Top=btnBookStock.Top;
+            btnBookStock.BackColor=Color.FromArgb(146, 158, 173);
+            //lblTitle.Text="Dashboard";
+            this.pnlFormLoader.Controls.Clear();
+            BookStock bookStock = new BookStock { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
+            bookStock.FormBorderStyle=FormBorderStyle.None;
+            this.pnlFormLoader.Controls.Add(bookStock);
+            bookStock.Show();
+        }
+
+        private void btnBookStock_Leave(object sender, EventArgs e)
+        { 
+            btnBookStock.BackColor=Color.FromArgb(135, 206, 235);
+        }
     }
 }

@@ -148,6 +148,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -170,6 +171,18 @@
     </Compile>
     <Compile Include="AddUsers.Designer.cs">
       <DependentUpon>AddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookSell.Designer.cs">
+      <DependentUpon>BookSell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookStock.Designer.cs">
+      <DependentUpon>BookStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -211,6 +224,12 @@
     </Compile>
     <EmbeddedResource Include="AddUsers.resx">
       <DependentUpon>AddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookSell.resx">
+      <DependentUpon>BookSell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookStock.resx">
+      <DependentUpon>BookStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -311,6 +330,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\rb_21493306031.png" />
+    <None Include="Resources\rb_2149330603.png" />
+    <None Include="Resources\rb_2149331316.png" />
+    <None Include="Resources\Screenshot 2024-12-06 033758.png" />
+    <None Include="Resources\rb_4208.png" />
+    <None Include="Resources\book_12096241 %281%29.png" />
+    <None Include="Resources\book_12096241.png" />
+    <None Include="Resources\book_4797697.png" />
+    <None Include="Resources\book_8568665.png" />
+    <None Include="Resources\book_11065794.png" />
+    <None Include="Resources\books_8798348 %281%29.png" />
+    <None Include="Resources\book_12096230 %281%29.png" />
+    <None Include="Resources\rb_2149341898.png" />
+    <None Include="Resources\rb_4009.png" />
+    <None Include="Resources\loading-arrow_11507232.png" />
+    <None Include="Resources\remove_7695824.png" />
+    <None Include="Resources\add_10023250.png" />
     <None Include="Resources\search_7712341.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

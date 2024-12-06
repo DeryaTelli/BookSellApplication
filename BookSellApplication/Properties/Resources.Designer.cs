@@ -73,6 +73,16 @@ namespace BookSellApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_10023250 {
+            get {
+                object obj = ResourceManager.GetObject("add_10023250", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_friend_2198060__1_ {
             get {
                 object obj = ResourceManager.GetObject("add-friend_2198060 (1)", resourceCulture);
@@ -103,6 +113,76 @@ namespace BookSellApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_11065794 {
+            get {
+                object obj = ResourceManager.GetObject("book_11065794", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_12096230__1_ {
+            get {
+                object obj = ResourceManager.GetObject("book_12096230 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_12096241 {
+            get {
+                object obj = ResourceManager.GetObject("book_12096241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_12096241__1_ {
+            get {
+                object obj = ResourceManager.GetObject("book_12096241 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_4797697 {
+            get {
+                object obj = ResourceManager.GetObject("book_4797697", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_8568665 {
+            get {
+                object obj = ResourceManager.GetObject("book_8568665", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap books_8798348__1_ {
+            get {
+                object obj = ResourceManager.GetObject("books_8798348 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_9449212__1_ {
             get {
                 object obj = ResourceManager.GetObject("home_9449212 (1)", resourceCulture);
@@ -116,6 +196,16 @@ namespace BookSellApplication.Properties {
         internal static System.Drawing.Bitmap line_chart_15265966__1_ {
             get {
                 object obj = ResourceManager.GetObject("line-chart_15265966 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loading_arrow_11507232 {
+            get {
+                object obj = ResourceManager.GetObject("loading-arrow_11507232", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +263,79 @@ namespace BookSellApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rb_2149330603 {
+            get {
+                object obj = ResourceManager.GetObject("rb_2149330603", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rb_21493306031 {
+            get {
+                object obj = ResourceManager.GetObject("rb_21493306031", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rb_2149331316 {
+            get {
+                object obj = ResourceManager.GetObject("rb_2149331316", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rb_2149341898 {
+            get {
+                object obj = ResourceManager.GetObject("rb_2149341898", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rb_4009 {
+            get {
+                object obj = ResourceManager.GetObject("rb_4009", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rb_4208 {
+            get {
+                object obj = ResourceManager.GetObject("rb_4208", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rb_4707__1_ {
             get {
                 object obj = ResourceManager.GetObject("rb_4707 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_7695824 {
+            get {
+                object obj = ResourceManager.GetObject("remove_7695824", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +386,16 @@ namespace BookSellApplication.Properties {
         internal static System.Drawing.Bitmap Screenshot_2024_12_02_181503 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-12-02 181503", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_12_06_033758 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-12-06 033758", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
