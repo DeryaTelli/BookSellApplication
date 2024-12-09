@@ -55,6 +55,8 @@
             this.txUserName.TabIndex = 1;
             this.txUserName.Text = "Username";
             this.txUserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txUserName.Enter += new System.EventHandler(this.txUserName_Enter);
+            this.txUserName.Leave += new System.EventHandler(this.txUserName_Leave);
             // 
             // panel2
             // 
@@ -82,6 +84,7 @@
             this.txPassword.Size = new System.Drawing.Size(198, 27);
             this.txPassword.TabIndex = 7;
             this.txPassword.Text = "Password";
+            this.txPassword.Enter += new System.EventHandler(this.txPassword_Enter);
             // 
             // btnLogin
             // 

@@ -11,8 +11,9 @@ using System.Windows.Forms;
 
 namespace BookSellApplication
 {
-    public partial class PersonalHome : Form
+    public partial class Personal : Form
     {
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
            int nLeftRect,
@@ -22,14 +23,14 @@ namespace BookSellApplication
            int nWidthEllipse,
            int nHeightEllipse);
 
-        public PersonalHome()
+        public Personal()
         {
             InitializeComponent();
             Region=System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            panelNav.Height=btnDashboardP.Height;
-            panelNav.Top=btnDashboardP.Top;
-            panelNav.Left=btnDashboardP.Left;
-            btnDashboardP.BackColor=Color.FromArgb(146, 158, 173);
+            panelNav.Height=btnDashboard.Height;
+            panelNav.Top=btnDashboard.Top;
+            panelNav.Left=btnDashboard.Left;
+            btnDashboard.BackColor=Color.FromArgb(146, 158, 173);
             //lblTitle.Text="Dashboard";
             this.pnlFormLoader.Controls.Clear();
             Dashboard dashboard = new Dashboard() { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
@@ -38,11 +39,11 @@ namespace BookSellApplication
             dashboard.Show();
         }
 
-        private void btnBookStockP_Click(object sender, EventArgs e)
+        private void btnBookStock_Click(object sender, EventArgs e)
         {
-            panelNav.Height=btnBookStockP.Height;
-            panelNav.Top=btnBookStockP.Top;
-            btnBookStockP.BackColor=Color.FromArgb(146, 158, 173);
+            panelNav.Height=btnBookStock.Height;
+            panelNav.Top=btnBookStock.Top;
+            btnBookStock.BackColor=Color.FromArgb(146, 158, 173);
             //lblTitle.Text="Dashboard";
             this.pnlFormLoader.Controls.Clear();
             BookStock bookStock = new BookStock { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
@@ -50,13 +51,12 @@ namespace BookSellApplication
             this.pnlFormLoader.Controls.Add(bookStock);
             bookStock.Show();
         }
-
-        private void btnDashboardP_Click(object sender, EventArgs e)
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
-            panelNav.Height=btnDashboardP.Height;
-            panelNav.Top=btnDashboardP.Top;
-            panelNav.Left=btnDashboardP.Left;
-            btnDashboardP.BackColor=Color.FromArgb(146, 158, 173);
+            panelNav.Height=btnDashboard.Height;
+            panelNav.Top=btnDashboard.Top;
+            panelNav.Left=btnDashboard.Left;
+            btnDashboard.BackColor=Color.FromArgb(146, 158, 173);
             //lblTitle.Text="Dashboard";
             this.pnlFormLoader.Controls.Clear();
             Dashboard dashboard = new Dashboard() { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
@@ -64,12 +64,11 @@ namespace BookSellApplication
             this.pnlFormLoader.Controls.Add(dashboard);
             dashboard.Show();
         }
-
-        private void btnAnalyticP_Click(object sender, EventArgs e)
+        private void btnAnalytic_Click(object sender, EventArgs e)
         {
-            panelNav.Height=btnAnalyticP.Height;
-            panelNav.Top=btnAnalyticP.Top;
-            btnAnalyticP.BackColor=Color.FromArgb(146, 158, 173);
+            panelNav.Height=btnAnalytic.Height;
+            panelNav.Top=btnAnalytic.Top;
+            btnAnalytic.BackColor=Color.FromArgb(146, 158, 173);
             //lblTitle.Text="Dashboard";
             this.pnlFormLoader.Controls.Clear();
             FrmAnalytics frmAnalytics = new FrmAnalytics() { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
@@ -77,12 +76,11 @@ namespace BookSellApplication
             this.pnlFormLoader.Controls.Add(frmAnalytics);
             frmAnalytics.Show();
         }
-
-        private void btnBookSellP_Click(object sender, EventArgs e)
+        private void btnBookSell_Click(object sender, EventArgs e)
         {
-            panelNav.Height=btnBookSellP.Height;
-            panelNav.Top=btnBookSellP.Top;
-            btnBookSellP.BackColor=Color.FromArgb(146, 158, 173);
+            panelNav.Height=btnBookSell.Height;
+            panelNav.Top=btnBookSell.Top;
+            btnBookSell.BackColor=Color.FromArgb(146, 158, 173);
             //lblTitle.Text="Dashboard";
             this.pnlFormLoader.Controls.Clear();
             BookSell bookSell = new BookSell() { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
@@ -90,12 +88,11 @@ namespace BookSellApplication
             this.pnlFormLoader.Controls.Add(bookSell);
             bookSell.Show();
         }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            panelNav.Height=btnLogoutP.Height;
-            panelNav.Top=btnLogoutP.Top;
-            btnLogoutP.BackColor=Color.FromArgb(146, 158, 173);
+            panelNav.Height=btnLogout.Height;
+            panelNav.Top=btnLogout.Top;
+            btnLogout.BackColor=Color.FromArgb(146, 158, 173);
             //lblTitle.Text="Dashboard";
             this.pnlFormLoader.Controls.Clear();
             Logout logout = new Logout() { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
@@ -104,29 +101,30 @@ namespace BookSellApplication
             logout.Show();
         }
 
-        private void btnLogoutP_Leave(object sender, EventArgs e)
+        private void btnLogout_Leave(object sender, EventArgs e)
         {
-            btnLogoutP.BackColor=Color.FromArgb(135, 206, 235);
+            btnLogout.BackColor=Color.FromArgb(135, 206, 235);
         }
 
-        private void btnBookSellP_Leave(object sender, EventArgs e)
+        private void btnBookSell_Leave(object sender, EventArgs e)
         {
-            btnBookSellP.BackColor=Color.FromArgb(135, 206, 235);
+            btnBookSell.BackColor=Color.FromArgb(135, 206, 235);
         }
 
-        private void btnAnalyticP_Leave(object sender, EventArgs e)
+        private void btnAnalytic_Leave(object sender, EventArgs e)
         {
-            btnAnalyticP.BackColor=Color.FromArgb(135, 206, 235);
+            btnAnalytic.BackColor=Color.FromArgb(135, 206, 235);
         }
 
         private void btnDashboardP_Leave(object sender, EventArgs e)
         {
-            btnDashboardP.BackColor=Color.FromArgb(135, 206, 235);
+            btnDashboard.BackColor=Color.FromArgb(135, 206, 235);
         }
 
         private void btnBookStockP_Leave(object sender, EventArgs e)
         {
-            btnBookStockP.BackColor=Color.FromArgb(135, 206, 235);
+            btnBookStock.BackColor=Color.FromArgb(135, 206, 235);
         }
     }
+
 }

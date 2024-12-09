@@ -220,11 +220,11 @@
     <Compile Include="Logout.Designer.cs">
       <DependentUpon>Logout.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonalHome.cs">
+    <Compile Include="Personal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PersonalHome.Designer.cs">
-      <DependentUpon>PersonalHome.cs</DependentUpon>
+    <Compile Include="Personal.Designer.cs">
+      <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -255,8 +255,8 @@
     <EmbeddedResource Include="Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonalHome.resx">
-      <DependentUpon>PersonalHome.cs</DependentUpon>
+    <EmbeddedResource Include="Personal.resx">
+      <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -339,6 +339,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\ledger_11771872 %281%291.png" />
     <None Include="Resources\ledger_11771872 %281%29.png" />
     <None Include="Resources\book_4715275 %281%29.png" />
     <None Include="Resources\rb_14902.png" />

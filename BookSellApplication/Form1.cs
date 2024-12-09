@@ -56,17 +56,73 @@ namespace BookSellApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // İkinci formu oluştur ve göster
-            Form2 secondForm = new Form2();
-            secondForm.Show();
 
-            // (Opsiyonel) İlk formu gizlemek isterseniz
-            this.Hide();
+            if (txUserName.Text =="Derya" && txPassword.Text=="123456") 
+            {
+               // MessageBox.Show("You are now logged in!");
+                // İkinci formu oluştur ve göster
+                Form2 secondForm = new Form2();
+                secondForm.Show();
+
+                // (Opsiyonel) İlk formu gizlemek isterseniz
+                this.Hide();
+
+            }else if (txUserName.Text =="Derya2" && txPassword.Text=="123456")
+            { 
+                Personal personal= new Personal();
+                personal.Show();
+                this.Hide();
+
+            }
+            else if (txUserName.Text == "" || txPassword.Text=="")
+            {
+                MessageBox.Show("Please give UserName && Password to proceed");
+            }
+            else
+            {
+                MessageBox.Show("Wrong Username or Password!!");
+            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txUserName_Enter(object sender, EventArgs e)
+        {
+            if (txUserName.Text =="Username")
+            {
+                txUserName.Text="";
+                txUserName.ForeColor=Color.Black;
+            }
+        }
+
+        private void txUserName_Leave(object sender, EventArgs e)
+        {
+            if (txUserName.Text =="")
+            {
+                txUserName.Text="Username";
+                txUserName.ForeColor=Color.Silver;
+            }
+        }
+
+        private void txPassword_Enter(object sender, EventArgs e)
+        {
+            if (txPassword.Text =="Password")
+            {
+                txPassword.Text="";
+                txPassword.ForeColor=Color.Black;
+            }
+        }
+        private void txPassword_Leave(object sender, EventArgs e)
+        {
+            if (txPassword.Text =="")
+            {
+                txPassword.Text="Password";
+                txPassword.ForeColor=Color.Silver;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace BookSellApplication
 {
-    partial class Form2
+    partial class Personal
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelNav = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
+            this.btnBookSell = new System.Windows.Forms.Button();
             this.btnAnalytic = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnBookStock = new System.Windows.Forms.Button();
@@ -55,8 +55,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 450);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flowLayoutPanel1.TabIndex = 10;
             // 
             // panel1
             // 
@@ -67,7 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(206, 137);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label2
             // 
@@ -79,7 +77,6 @@
             this.label2.Size = new System.Drawing.Size(143, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Some users text here";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -91,7 +88,6 @@
             this.label1.Size = new System.Drawing.Size(93, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "User Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -103,13 +99,12 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panelNav);
             this.panel2.Controls.Add(this.btnLogout);
-            this.panel2.Controls.Add(this.btnAddUser);
+            this.panel2.Controls.Add(this.btnBookSell);
             this.panel2.Controls.Add(this.btnAnalytic);
             this.panel2.Controls.Add(this.btnDashboard);
             this.panel2.Controls.Add(this.btnBookStock);
@@ -117,7 +112,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(206, 304);
             this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panelNav
             // 
@@ -126,7 +120,6 @@
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(3, 100);
             this.panelNav.TabIndex = 3;
-            this.panelNav.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNav_Paint);
             // 
             // btnLogout
             // 
@@ -143,26 +136,22 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.button7_Click);
-            this.btnLogout.Leave += new System.EventHandler(this.btnSettings_Leave);
             // 
-            // btnAddUser
+            // btnBookSell
             // 
-            this.btnAddUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddUser.FlatAppearance.BorderSize = 0;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAddUser.Image = global::BookSellApplication.Properties.Resources.add_friend_2198060__1_;
-            this.btnAddUser.Location = new System.Drawing.Point(0, 120);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(206, 40);
-            this.btnAddUser.TabIndex = 8;
-            this.btnAddUser.Text = "Add Personal";
-            this.btnAddUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            this.btnAddUser.Leave += new System.EventHandler(this.btnAddUser_Leave);
+            this.btnBookSell.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBookSell.FlatAppearance.BorderSize = 0;
+            this.btnBookSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookSell.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookSell.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnBookSell.Image = global::BookSellApplication.Properties.Resources.ledger_11771872__1_1;
+            this.btnBookSell.Location = new System.Drawing.Point(0, 120);
+            this.btnBookSell.Name = "btnBookSell";
+            this.btnBookSell.Size = new System.Drawing.Size(206, 40);
+            this.btnBookSell.TabIndex = 8;
+            this.btnBookSell.Text = "Book Sell";
+            this.btnBookSell.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBookSell.UseVisualStyleBackColor = true;
             // 
             // btnAnalytic
             // 
@@ -179,8 +168,6 @@
             this.btnAnalytic.Text = "Analytics";
             this.btnAnalytic.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnalytic.UseVisualStyleBackColor = true;
-            this.btnAnalytic.Click += new System.EventHandler(this.btnAnalytic_Click);
-            this.btnAnalytic.Leave += new System.EventHandler(this.btnAnalytic_Leave);
             // 
             // btnDashboard
             // 
@@ -197,8 +184,6 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
             // btnBookStock
             // 
@@ -215,8 +200,7 @@
             this.btnBookStock.Text = "Book Stock";
             this.btnBookStock.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBookStock.UseVisualStyleBackColor = true;
-            this.btnBookStock.Click += new System.EventHandler(this.button1_Click);
-            this.btnBookStock.Leave += new System.EventHandler(this.btnBookStock_Leave);
+            this.btnBookStock.Click += new System.EventHandler(this.btnBookStock_Click);
             // 
             // pnlFormLoader
             // 
@@ -226,23 +210,19 @@
             this.pnlFormLoader.Location = new System.Drawing.Point(217, 0);
             this.pnlFormLoader.Name = "pnlFormLoader";
             this.pnlFormLoader.Size = new System.Drawing.Size(683, 450);
-            this.pnlFormLoader.TabIndex = 9;
-            this.pnlFormLoader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFormLoader_Paint);
+            this.pnlFormLoader.TabIndex = 11;
             // 
-            // Form2
+            // Personal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BookSellApplication.Properties.Resources.Screenshot_2024_12_02_134147;
             this.ClientSize = new System.Drawing.Size(900, 450);
-            this.Controls.Add(this.pnlFormLoader);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Controls.Add(this.pnlFormLoader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
-            this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Name = "Personal";
+            this.Text = "Personal";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -255,17 +235,17 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.Button btnAnalytic;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Panel panelNav;
-        private System.Windows.Forms.Panel pnlFormLoader;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnBookSell;
+        private System.Windows.Forms.Button btnAnalytic;
+        private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnBookStock;
+        private System.Windows.Forms.Panel pnlFormLoader;
     }
 }

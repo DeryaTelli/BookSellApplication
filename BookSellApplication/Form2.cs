@@ -13,14 +13,14 @@ namespace BookSellApplication
 {
     public partial class Form2 : Form
     {
-        [DllImport("Gdi32.dll",EntryPoint ="CreateRoundRectRgn")]
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse);
+         int nLeftRect,
+         int nTopRect,
+         int nRightRect,
+         int nBottomRect,
+         int nWidthEllipse,
+         int nHeightEllipse);
 
         public Form2()
         {
@@ -172,6 +172,31 @@ namespace BookSellApplication
         private void btnBookStock_Leave(object sender, EventArgs e)
         { 
             btnBookStock.BackColor=Color.FromArgb(135, 206, 235);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelNav_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
