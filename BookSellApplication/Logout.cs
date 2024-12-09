@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BookSellApplication
 {
-    public partial class Settings : Form
+    public partial class Logout : Form
     {
-        public Settings()
+        public Logout()
         {
             InitializeComponent();
         }

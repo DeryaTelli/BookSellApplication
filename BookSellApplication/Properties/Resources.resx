@@ -151,14 +151,14 @@
   <data name="book_12096230 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_12096230 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rb_14902" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rb_14902.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot 2024-12-02 134147" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-12-02 134147.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_7712341" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_7712341.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home_9449212 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_9449212 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Screenshot 2024-12-06 033758" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-12-06 033758.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,11 +184,20 @@
   <data name="remove_7695824" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove_7695824.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rb_2149330603" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rb_2149330603.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rb_21493306031" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rb_21493306031.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add_10023250" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_10023250.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add-user_9572771 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-user_9572771 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_4715275 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_4715275 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rb_2147630138" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rb_2147630138.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +205,8 @@
   <data name="add-user_9572771 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-user_9572771 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Purple Modern Futuristic Technology Presentation (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Purple Modern Futuristic Technology Presentation (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home_9449212 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_9449212 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Screenshot 2024-12-02 125054" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-12-02 125054.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,13 +226,13 @@
   <data name="Screenshot 2024-12-02 1245351" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-12-02 1245351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Purple Modern Futuristic Technology Presentation (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purple Modern Futuristic Technology Presentation (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="rb_2149341898" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rb_2149341898.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rb_2149330603" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rb_2149330603.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rb_21493306031" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rb_21493306031.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ledger_11771872 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ledger_11771872 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

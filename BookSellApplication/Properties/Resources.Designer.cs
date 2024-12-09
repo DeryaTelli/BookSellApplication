@@ -153,6 +153,16 @@ namespace BookSellApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_4715275__1_ {
+            get {
+                object obj = ResourceManager.GetObject("book_4715275 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_4797697 {
             get {
                 object obj = ResourceManager.GetObject("book_4797697", resourceCulture);
@@ -186,6 +196,16 @@ namespace BookSellApplication.Properties {
         internal static System.Drawing.Bitmap home_9449212__1_ {
             get {
                 object obj = ResourceManager.GetObject("home_9449212 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ledger_11771872__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ledger_11771872 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +266,16 @@ namespace BookSellApplication.Properties {
         internal static System.Drawing.Bitmap Purple_Modern_Futuristic_Technology_Presentation__3_ {
             get {
                 object obj = ResourceManager.GetObject("Purple Modern Futuristic Technology Presentation (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rb_14902 {
+            get {
+                object obj = ResourceManager.GetObject("rb_14902", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

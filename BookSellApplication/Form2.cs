@@ -105,15 +105,15 @@ namespace BookSellApplication
 
         private void button7_Click(object sender, EventArgs e)
         {
-            panelNav.Height=btnSettings.Height;
-            panelNav.Top=btnSettings.Top;
-            btnSettings.BackColor=Color.FromArgb(146, 158, 173);
+            panelNav.Height=btnLogout.Height;
+            panelNav.Top=btnLogout.Top;
+            btnLogout.BackColor=Color.FromArgb(146, 158, 173);
             //lblTitle.Text="Dashboard";
             this.pnlFormLoader.Controls.Clear();
-            Settings settings = new Settings() { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
-            settings.FormBorderStyle=FormBorderStyle.None;
-            this.pnlFormLoader.Controls.Add(settings);
-            settings.Show();
+            Logout logout = new Logout() { Dock=DockStyle.Fill, TopLevel=false, TopMost=true };
+            logout.FormBorderStyle=FormBorderStyle.None;
+            this.pnlFormLoader.Controls.Add(logout);
+            logout.Show();
         }
 
         private void btnDashboard_Leave(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace BookSellApplication
 
         private void btnSettings_Leave(object sender, EventArgs e)
         {
-           btnSettings.BackColor=Color.FromArgb(135, 206, 235);
+           btnLogout.BackColor=Color.FromArgb(135, 206, 235);
         }
 
         private void label3_Click(object sender, EventArgs e)
