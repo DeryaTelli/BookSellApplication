@@ -33,11 +33,9 @@
             this.bunifuCircleProgress2 = new Bunifu.UI.WinForms.BunifuCircleProgress();
             this.bunifuCircleProgress1 = new Bunifu.UI.WinForms.BunifuCircleProgress();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataBookTable = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txSearch = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuCircleProgress3 = new Bunifu.UI.WinForms.BunifuCircleProgress();
@@ -48,7 +46,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBookTable)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -165,34 +163,17 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Book Sale Rates";
             // 
-            // dataGridView1
+            // dataBookTable
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.BurlyWood;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookName,
-            this.bookQuantity});
-            this.dataGridView1.Location = new System.Drawing.Point(25, 145);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(303, 202);
-            this.dataGridView1.TabIndex = 18;
-            // 
-            // bookName
-            // 
-            this.bookName.HeaderText = "Book Name";
-            this.bookName.MinimumWidth = 6;
-            this.bookName.Name = "bookName";
-            this.bookName.Width = 125;
-            // 
-            // bookQuantity
-            // 
-            this.bookQuantity.HeaderText = "Book Quantity";
-            this.bookQuantity.MinimumWidth = 4;
-            this.bookQuantity.Name = "bookQuantity";
-            this.bookQuantity.Width = 125;
+            this.dataBookTable.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.dataBookTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataBookTable.Location = new System.Drawing.Point(25, 145);
+            this.dataBookTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataBookTable.Name = "dataBookTable";
+            this.dataBookTable.RowHeadersWidth = 51;
+            this.dataBookTable.RowTemplate.Height = 24;
+            this.dataBookTable.Size = new System.Drawing.Size(303, 202);
+            this.dataBookTable.TabIndex = 18;
             // 
             // btnSearch
             // 
@@ -208,31 +189,31 @@
             this.btnSearch.Size = new System.Drawing.Size(29, 30);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox1
+            // txSearch
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.LightBlue;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(25, 96);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 30);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Text = "Search book name...";
+            this.txSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txSearch.BackColor = System.Drawing.Color.LightBlue;
+            this.txSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.txSearch.Location = new System.Drawing.Point(25, 96);
+            this.txSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txSearch.Multiline = true;
+            this.txSearch.Name = "txSearch";
+            this.txSearch.Size = new System.Drawing.Size(276, 30);
+            this.txSearch.TabIndex = 9;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel5.BackgroundImage = global::BookSellApplication.Properties.Resources.Purple_Modern_Futuristic_Technology_Presentation__2_;
-            this.panel5.Controls.Add(this.dataGridView1);
+            this.panel5.Controls.Add(this.dataBookTable);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.bunifuCircleProgress3);
             this.panel5.Controls.Add(this.btnSearch);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.txSearch);
             this.panel5.Location = new System.Drawing.Point(303, 62);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
@@ -250,7 +231,6 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Book Titles, Quantities Sold Today";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // bunifuCircleProgress3
             // 
@@ -376,7 +356,7 @@
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBookTable)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -393,11 +373,9 @@
         private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress2;
         private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookQuantity;
+        private System.Windows.Forms.DataGridView dataBookTable;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txSearch;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
         private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress3;

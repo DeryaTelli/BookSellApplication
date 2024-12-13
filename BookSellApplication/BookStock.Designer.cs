@@ -30,38 +30,32 @@
         {
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txSearch = new System.Windows.Forms.TextBox();
+            this.dataBookTable = new System.Windows.Forms.DataGridView();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnStockUpdate = new System.Windows.Forms.Button();
+            this.btnStockDelete = new System.Windows.Forms.Button();
+            this.btnStockAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txBookName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txAuthor = new System.Windows.Forms.TextBox();
+            this.txPageNumber = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookPageN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbBookType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txQuantity = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBookTable)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,8 +63,8 @@
             // 
             this.panel9.BackgroundImage = global::BookSellApplication.Properties.Resources.Purple_Modern_Futuristic_Technology_Presentation__3_;
             this.panel9.Controls.Add(this.btnSearch);
-            this.panel9.Controls.Add(this.textBox5);
-            this.panel9.Controls.Add(this.dataGridView1);
+            this.panel9.Controls.Add(this.txSearch);
+            this.panel9.Controls.Add(this.dataBookTable);
             this.panel9.Location = new System.Drawing.Point(26, 39);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(645, 227);
@@ -92,38 +86,31 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBox5
+            // txSearch
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.BackColor = System.Drawing.Color.LightBlue;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox5.Location = new System.Drawing.Point(304, 17);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(285, 30);
-            this.textBox5.TabIndex = 21;
-            this.textBox5.Text = "Search book name...";
+            this.txSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txSearch.BackColor = System.Drawing.Color.LightBlue;
+            this.txSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.txSearch.Location = new System.Drawing.Point(304, 17);
+            this.txSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txSearch.Multiline = true;
+            this.txSearch.Name = "txSearch";
+            this.txSearch.Size = new System.Drawing.Size(285, 30);
+            this.txSearch.TabIndex = 21;
             // 
-            // dataGridView1
+            // dataBookTable
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.BurlyWood;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookName,
-            this.bookAuthor,
-            this.bookPageN,
-            this.bookPrice,
-            this.bookQuantity,
-            this.BookType});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 150);
-            this.dataGridView1.TabIndex = 20;
+            this.dataBookTable.BackgroundColor = System.Drawing.Color.BurlyWood;
+            this.dataBookTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataBookTable.Location = new System.Drawing.Point(11, 62);
+            this.dataBookTable.Name = "dataBookTable";
+            this.dataBookTable.RowHeadersWidth = 51;
+            this.dataBookTable.RowTemplate.Height = 24;
+            this.dataBookTable.Size = new System.Drawing.Size(618, 150);
+            this.dataBookTable.TabIndex = 20;
+            this.dataBookTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataBookTable_CellContentClick);
             // 
             // lblTitle
             // 
@@ -138,53 +125,53 @@
             this.lblTitle.TabIndex = 25;
             this.lblTitle.Text = "Book Stocks";
             // 
-            // button2
+            // btnStockUpdate
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Image = global::BookSellApplication.Properties.Resources.book_8568665;
-            this.button2.Location = new System.Drawing.Point(522, 337);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 38);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Stock Update";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnStockUpdate.FlatAppearance.BorderSize = 0;
+            this.btnStockUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStockUpdate.Font = new System.Drawing.Font("Nirmala UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockUpdate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnStockUpdate.Image = global::BookSellApplication.Properties.Resources.book_8568665;
+            this.btnStockUpdate.Location = new System.Drawing.Point(522, 337);
+            this.btnStockUpdate.Name = "btnStockUpdate";
+            this.btnStockUpdate.Size = new System.Drawing.Size(156, 38);
+            this.btnStockUpdate.TabIndex = 30;
+            this.btnStockUpdate.Text = "Stock Update";
+            this.btnStockUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStockUpdate.UseVisualStyleBackColor = true;
+            this.btnStockUpdate.Click += new System.EventHandler(this.btnStockUpdate_Click);
             // 
-            // button1
+            // btnStockDelete
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Image = global::BookSellApplication.Properties.Resources.book_4797697;
-            this.button1.Location = new System.Drawing.Point(522, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 38);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Stock Delete";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnStockDelete.FlatAppearance.BorderSize = 0;
+            this.btnStockDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStockDelete.Font = new System.Drawing.Font("Nirmala UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockDelete.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnStockDelete.Image = global::BookSellApplication.Properties.Resources.book_4797697;
+            this.btnStockDelete.Location = new System.Drawing.Point(522, 385);
+            this.btnStockDelete.Name = "btnStockDelete";
+            this.btnStockDelete.Size = new System.Drawing.Size(156, 38);
+            this.btnStockDelete.TabIndex = 29;
+            this.btnStockDelete.Text = "Stock Delete";
+            this.btnStockDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStockDelete.UseVisualStyleBackColor = true;
+            this.btnStockDelete.Click += new System.EventHandler(this.btnStockDelete_Click);
             // 
-            // btnDashboard
+            // btnStockAdd
             // 
-            this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnDashboard.Image = global::BookSellApplication.Properties.Resources.book_11065794;
-            this.btnDashboard.Location = new System.Drawing.Point(522, 288);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(156, 38);
-            this.btnDashboard.TabIndex = 28;
-            this.btnDashboard.Text = "Stock Add";
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnStockAdd.FlatAppearance.BorderSize = 0;
+            this.btnStockAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStockAdd.Font = new System.Drawing.Font("Nirmala UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockAdd.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnStockAdd.Image = global::BookSellApplication.Properties.Resources.book_11065794;
+            this.btnStockAdd.Location = new System.Drawing.Point(522, 288);
+            this.btnStockAdd.Name = "btnStockAdd";
+            this.btnStockAdd.Size = new System.Drawing.Size(156, 38);
+            this.btnStockAdd.TabIndex = 28;
+            this.btnStockAdd.Text = "Stock Add";
+            this.btnStockAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStockAdd.UseVisualStyleBackColor = true;
+            this.btnStockAdd.Click += new System.EventHandler(this.btnStockAdd_Click);
             // 
             // label2
             // 
@@ -230,15 +217,15 @@
             this.panel3.Size = new System.Drawing.Size(190, 1);
             this.panel3.TabIndex = 8;
             // 
-            // textBox1
+            // txBookName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(136, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 20);
-            this.textBox1.TabIndex = 7;
+            this.txBookName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txBookName.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txBookName.ForeColor = System.Drawing.Color.Silver;
+            this.txBookName.Location = new System.Drawing.Point(136, 20);
+            this.txBookName.Name = "txBookName";
+            this.txBookName.Size = new System.Drawing.Size(190, 20);
+            this.txBookName.TabIndex = 7;
             // 
             // panel2
             // 
@@ -256,25 +243,25 @@
             this.panel4.Size = new System.Drawing.Size(47, 1);
             this.panel4.TabIndex = 13;
             // 
-            // textBox2
+            // txAuthor
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(136, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 20);
-            this.textBox2.TabIndex = 10;
+            this.txAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txAuthor.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txAuthor.ForeColor = System.Drawing.Color.Silver;
+            this.txAuthor.Location = new System.Drawing.Point(136, 66);
+            this.txAuthor.Name = "txAuthor";
+            this.txAuthor.Size = new System.Drawing.Size(190, 20);
+            this.txAuthor.TabIndex = 10;
             // 
-            // textBox3
+            // txPageNumber
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(137, 108);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(47, 20);
-            this.textBox3.TabIndex = 12;
+            this.txPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txPageNumber.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txPageNumber.ForeColor = System.Drawing.Color.Silver;
+            this.txPageNumber.Location = new System.Drawing.Point(137, 108);
+            this.txPageNumber.Name = "txPageNumber";
+            this.txPageNumber.Size = new System.Drawing.Size(47, 20);
+            this.txPageNumber.TabIndex = 12;
             // 
             // label4
             // 
@@ -296,15 +283,15 @@
             this.panel6.Size = new System.Drawing.Size(47, 1);
             this.panel6.TabIndex = 19;
             // 
-            // textBox6
+            // txPrice
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Silver;
-            this.textBox6.Location = new System.Drawing.Point(263, 109);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(47, 20);
-            this.textBox6.TabIndex = 18;
+            this.txPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txPrice.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txPrice.ForeColor = System.Drawing.Color.Silver;
+            this.txPrice.Location = new System.Drawing.Point(263, 109);
+            this.txPrice.Name = "txPrice";
+            this.txPrice.Size = new System.Drawing.Size(47, 20);
+            this.txPrice.TabIndex = 18;
             // 
             // label5
             // 
@@ -321,17 +308,17 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::BookSellApplication.Properties.Resources.Purple_Modern_Futuristic_Technology_Presentation__1_;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbBookType);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txQuantity);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txPrice);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txPageNumber);
+            this.panel1.Controls.Add(this.txAuthor);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txBookName);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -342,67 +329,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(491, 163);
             this.panel1.TabIndex = 27;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBox4
+            // cbBookType
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(437, 108);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(47, 20);
-            this.textBox4.TabIndex = 21;
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(437, 131);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(47, 1);
-            this.panel5.TabIndex = 22;
-            // 
-            // bookName
-            // 
-            this.bookName.HeaderText = "Book Name";
-            this.bookName.MinimumWidth = 6;
-            this.bookName.Name = "bookName";
-            this.bookName.Width = 125;
-            // 
-            // bookAuthor
-            // 
-            this.bookAuthor.HeaderText = "Author";
-            this.bookAuthor.MinimumWidth = 6;
-            this.bookAuthor.Name = "bookAuthor";
-            this.bookAuthor.Width = 125;
-            // 
-            // bookPageN
-            // 
-            this.bookPageN.HeaderText = "Page Number";
-            this.bookPageN.MinimumWidth = 6;
-            this.bookPageN.Name = "bookPageN";
-            this.bookPageN.Width = 125;
-            // 
-            // bookPrice
-            // 
-            this.bookPrice.HeaderText = "Price";
-            this.bookPrice.MinimumWidth = 6;
-            this.bookPrice.Name = "bookPrice";
-            this.bookPrice.Width = 125;
-            // 
-            // bookQuantity
-            // 
-            this.bookQuantity.HeaderText = "Quantity";
-            this.bookQuantity.MinimumWidth = 6;
-            this.bookQuantity.Name = "bookQuantity";
-            this.bookQuantity.Width = 125;
-            // 
-            // BookType
-            // 
-            this.BookType.HeaderText = "Book Type ";
-            this.BookType.MinimumWidth = 6;
-            this.BookType.Name = "BookType";
-            this.BookType.Width = 125;
+            this.cbBookType.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold);
+            this.cbBookType.ForeColor = System.Drawing.Color.Silver;
+            this.cbBookType.FormattingEnabled = true;
+            this.cbBookType.Items.AddRange(new object[] {
+            "Fiction",
+            "Non-Fiction",
+            "Science",
+            "Fantasy",
+            "Biography",
+            "History",
+            "Mystery",
+            "Romance",
+            "Horror",
+            "Self-Help"});
+            this.cbBookType.Location = new System.Drawing.Point(356, 55);
+            this.cbBookType.Name = "cbBookType";
+            this.cbBookType.Size = new System.Drawing.Size(121, 28);
+            this.cbBookType.TabIndex = 24;
             // 
             // label1
             // 
@@ -416,26 +363,23 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Book Type";
             // 
-            // comboBox1
+            // txQuantity
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.ForeColor = System.Drawing.Color.Silver;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Fiction",
-            "Non-Fiction",
-            "Science",
-            "Fantasy",
-            "Biography",
-            "History",
-            "Mystery",
-            "Romance",
-            "Horror",
-            "Self-Help"});
-            this.comboBox1.Location = new System.Drawing.Point(356, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 24;
+            this.txQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txQuantity.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txQuantity.ForeColor = System.Drawing.Color.Silver;
+            this.txQuantity.Location = new System.Drawing.Point(437, 108);
+            this.txQuantity.Name = "txQuantity";
+            this.txQuantity.Size = new System.Drawing.Size(47, 20);
+            this.txQuantity.TabIndex = 21;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Location = new System.Drawing.Point(437, 131);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(47, 1);
+            this.panel5.TabIndex = 22;
             // 
             // BookStock
             // 
@@ -443,19 +387,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BookSellApplication.Properties.Resources.Screenshot_2024_12_02_134147;
             this.ClientSize = new System.Drawing.Size(683, 447);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnDashboard);
+            this.Controls.Add(this.btnStockUpdate);
+            this.Controls.Add(this.btnStockDelete);
+            this.Controls.Add(this.btnStockAdd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BookStock";
             this.Text = "BookStock";
-            this.Load += new System.EventHandler(this.BookStock_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBookTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -467,35 +410,29 @@
 
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txSearch;
+        private System.Windows.Forms.DataGridView dataBookTable;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnStockUpdate;
+        private System.Windows.Forms.Button btnStockDelete;
+        private System.Windows.Forms.Button btnStockAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txBookName;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txAuthor;
+        private System.Windows.Forms.TextBox txPageNumber;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txPrice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txQuantity;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookPageN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookType;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbBookType;
         private System.Windows.Forms.Label label1;
     }
 }

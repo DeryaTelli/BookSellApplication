@@ -88,6 +88,7 @@
             this.chart1.Size = new System.Drawing.Size(525, 341);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart1";
+           
             // 
             // pictureBox1
             // 
