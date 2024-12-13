@@ -352,10 +352,10 @@
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel3.BackgroundImage = global::BookSellApplication.Properties.Resources.Purple_Modern_Futuristic_Technology_Presentation__2_;
-            this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.labelEarn);
             this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Location = new System.Drawing.Point(21, 62);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";

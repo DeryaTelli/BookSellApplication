@@ -25,6 +25,8 @@ namespace BookSellApplication
         public Form2()
         {
             InitializeComponent();
+            this.Width = 900;
+            this.Height = 450;
             Region=System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             panelNav.Height=btnDashboard.Height;
             panelNav.Top=btnDashboard.Top;

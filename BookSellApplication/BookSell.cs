@@ -16,5 +16,10 @@ namespace BookSellApplication
         {
             InitializeComponent();
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

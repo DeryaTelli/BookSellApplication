@@ -40,7 +40,7 @@
             this.btnAnalytic = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnBookStock = new System.Windows.Forms.Button();
-            this.pnlFormLoader = new System.Windows.Forms.Panel();
+            this.formPanel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,10 +51,10 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.SkyBlue;
             this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 450);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(220, 450);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // panel1
@@ -62,9 +62,10 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(206, 137);
+            this.panel1.Size = new System.Drawing.Size(214, 137);
             this.panel1.TabIndex = 2;
             // 
             // label2
@@ -102,15 +103,16 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.Controls.Add(this.panelNav);
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btnBookSell);
             this.panel2.Controls.Add(this.btnAnalytic);
             this.panel2.Controls.Add(this.btnDashboard);
             this.panel2.Controls.Add(this.btnBookStock);
-            this.panel2.Location = new System.Drawing.Point(3, 146);
+            this.panel2.Location = new System.Drawing.Point(0, 143);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 304);
+            this.panel2.Size = new System.Drawing.Size(220, 304);
             this.panel2.TabIndex = 3;
             // 
             // panelNav
@@ -131,11 +133,13 @@
             this.btnLogout.Image = global::BookSellApplication.Properties.Resources.setting_17107264__1_;
             this.btnLogout.Location = new System.Drawing.Point(0, 264);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(206, 40);
+            this.btnLogout.Size = new System.Drawing.Size(220, 40);
             this.btnLogout.TabIndex = 10;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
+            this.btnLogout.Leave += new System.EventHandler(this.btnLogout_Leave);
             // 
             // btnBookSell
             // 
@@ -147,11 +151,13 @@
             this.btnBookSell.Image = global::BookSellApplication.Properties.Resources.ledger_11771872__1_1;
             this.btnBookSell.Location = new System.Drawing.Point(0, 120);
             this.btnBookSell.Name = "btnBookSell";
-            this.btnBookSell.Size = new System.Drawing.Size(206, 40);
+            this.btnBookSell.Size = new System.Drawing.Size(220, 40);
             this.btnBookSell.TabIndex = 8;
             this.btnBookSell.Text = "Book Sell";
             this.btnBookSell.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBookSell.UseVisualStyleBackColor = true;
+            this.btnBookSell.Click += new System.EventHandler(this.btnBookSell_Click_1);
+            this.btnBookSell.Leave += new System.EventHandler(this.btnBookSell_Leave);
             // 
             // btnAnalytic
             // 
@@ -163,11 +169,13 @@
             this.btnAnalytic.Image = global::BookSellApplication.Properties.Resources.line_chart_15265966__1_;
             this.btnAnalytic.Location = new System.Drawing.Point(0, 80);
             this.btnAnalytic.Name = "btnAnalytic";
-            this.btnAnalytic.Size = new System.Drawing.Size(206, 40);
+            this.btnAnalytic.Size = new System.Drawing.Size(220, 40);
             this.btnAnalytic.TabIndex = 4;
             this.btnAnalytic.Text = "Analytics";
             this.btnAnalytic.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAnalytic.UseVisualStyleBackColor = true;
+            this.btnAnalytic.Click += new System.EventHandler(this.btnAnalytic_Click_1);
+            this.btnAnalytic.Leave += new System.EventHandler(this.btnAnalytic_Leave);
             // 
             // btnDashboard
             // 
@@ -179,11 +187,13 @@
             this.btnDashboard.Image = global::BookSellApplication.Properties.Resources.home_9449212__1_;
             this.btnDashboard.Location = new System.Drawing.Point(0, 40);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(206, 40);
+            this.btnDashboard.Size = new System.Drawing.Size(220, 40);
             this.btnDashboard.TabIndex = 3;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
+            this.btnDashboard.Leave += new System.EventHandler(this.btnDashboard_Leave);
             // 
             // btnBookStock
             // 
@@ -195,22 +205,22 @@
             this.btnBookStock.Image = global::BookSellApplication.Properties.Resources.books_8798348__1_;
             this.btnBookStock.Location = new System.Drawing.Point(0, 0);
             this.btnBookStock.Name = "btnBookStock";
-            this.btnBookStock.Size = new System.Drawing.Size(206, 40);
+            this.btnBookStock.Size = new System.Drawing.Size(220, 40);
             this.btnBookStock.TabIndex = 11;
             this.btnBookStock.Text = "Book Stock";
             this.btnBookStock.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBookStock.UseVisualStyleBackColor = true;
             this.btnBookStock.Click += new System.EventHandler(this.btnBookStock_Click);
+            this.btnBookStock.Leave += new System.EventHandler(this.btnBookStock_Leave);
             // 
-            // pnlFormLoader
+            // formPanel
             // 
-            this.pnlFormLoader.AutoScroll = true;
-            this.pnlFormLoader.BackColor = System.Drawing.Color.Transparent;
-            this.pnlFormLoader.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlFormLoader.Location = new System.Drawing.Point(217, 0);
-            this.pnlFormLoader.Name = "pnlFormLoader";
-            this.pnlFormLoader.Size = new System.Drawing.Size(683, 450);
-            this.pnlFormLoader.TabIndex = 11;
+            this.formPanel.BackColor = System.Drawing.Color.Transparent;
+            this.formPanel.Location = new System.Drawing.Point(218, 0);
+            this.formPanel.Name = "formPanel";
+            this.formPanel.Size = new System.Drawing.Size(682, 461);
+            this.formPanel.TabIndex = 11;
+            this.formPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.formPanel_Paint);
             // 
             // Personal
             // 
@@ -218,8 +228,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BookSellApplication.Properties.Resources.Screenshot_2024_12_02_134147;
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.formPanel);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.pnlFormLoader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Personal";
             this.Text = "Personal";
@@ -246,6 +257,6 @@
         private System.Windows.Forms.Button btnAnalytic;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnBookStock;
-        private System.Windows.Forms.Panel pnlFormLoader;
+        private System.Windows.Forms.Panel formPanel;
     }
 }

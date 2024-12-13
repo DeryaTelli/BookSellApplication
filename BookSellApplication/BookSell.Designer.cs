@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bookQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookPageN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,48 +43,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bookQuantity
-            // 
-            this.bookQuantity.HeaderText = "Quantity";
-            this.bookQuantity.MinimumWidth = 6;
-            this.bookQuantity.Name = "bookQuantity";
-            this.bookQuantity.Width = 125;
-            // 
-            // bookPageN
-            // 
-            this.bookPageN.HeaderText = "Page Number";
-            this.bookPageN.MinimumWidth = 6;
-            this.bookPageN.Name = "bookPageN";
-            this.bookPageN.Width = 125;
-            // 
-            // bookAuthor
-            // 
-            this.bookAuthor.HeaderText = "Author";
-            this.bookAuthor.MinimumWidth = 6;
-            this.bookAuthor.Name = "bookAuthor";
-            this.bookAuthor.Width = 125;
-            // 
-            // bookName
-            // 
-            this.bookName.HeaderText = "Book Name";
-            this.bookName.MinimumWidth = 6;
-            this.bookName.Name = "bookName";
-            this.bookName.Width = 125;
-            // 
             // btnDashboard
             // 
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnDashboard.Image = global::BookSellApplication.Properties.Resources.book_12096241__1_;
-            this.btnDashboard.Location = new System.Drawing.Point(498, 324);
+            this.btnDashboard.Location = new System.Drawing.Point(415, 319);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(159, 45);
+            this.btnDashboard.Size = new System.Drawing.Size(159, 60);
             this.btnDashboard.TabIndex = 34;
             this.btnDashboard.Text = "Book Sell";
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // panel9
             // 
@@ -94,9 +65,9 @@
             this.panel9.Controls.Add(this.btnSearch);
             this.panel9.Controls.Add(this.textBox5);
             this.panel9.Controls.Add(this.dataGridView1);
-            this.panel9.Location = new System.Drawing.Point(12, 70);
+            this.panel9.Location = new System.Drawing.Point(72, 64);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(645, 239);
+            this.panel9.Size = new System.Drawing.Size(502, 239);
             this.panel9.TabIndex = 32;
             // 
             // btnSearch
@@ -107,7 +78,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSearch.ForeColor = System.Drawing.Color.DimGray;
             this.btnSearch.Image = global::BookSellApplication.Properties.Resources.search_7712341;
-            this.btnSearch.Location = new System.Drawing.Point(594, 17);
+            this.btnSearch.Location = new System.Drawing.Point(426, 21);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(29, 30);
@@ -121,11 +92,11 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox5.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox5.Location = new System.Drawing.Point(304, 18);
+            this.textBox5.Location = new System.Drawing.Point(99, 22);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(285, 30);
+            this.textBox5.Size = new System.Drawing.Size(321, 30);
             this.textBox5.TabIndex = 21;
             this.textBox5.Text = "Search book name...";
             // 
@@ -136,15 +107,27 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookName,
             this.bookAuthor,
-            this.bookPageN,
-            this.bookPrice,
-            this.bookQuantity});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 66);
+            this.bookPrice});
+            this.dataGridView1.Location = new System.Drawing.Point(26, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(430, 150);
             this.dataGridView1.TabIndex = 20;
+            // 
+            // bookName
+            // 
+            this.bookName.HeaderText = "Book Name";
+            this.bookName.MinimumWidth = 6;
+            this.bookName.Name = "bookName";
+            this.bookName.Width = 125;
+            // 
+            // bookAuthor
+            // 
+            this.bookAuthor.HeaderText = "Author";
+            this.bookAuthor.MinimumWidth = 6;
+            this.bookAuthor.Name = "bookAuthor";
+            this.bookAuthor.Width = 125;
             // 
             // bookPrice
             // 
@@ -170,7 +153,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::BookSellApplication.Properties.Resources.rb_21493306031;
-            this.pictureBox1.Location = new System.Drawing.Point(-30, 340);
+            this.pictureBox1.Location = new System.Drawing.Point(-15, 331);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -200,17 +183,15 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookPageN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookAuthor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookPrice;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookAuthor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookPrice;
     }
 }
