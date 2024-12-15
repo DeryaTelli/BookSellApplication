@@ -30,8 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblPercentage = new System.Windows.Forms.Label();
+            this.labelnfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,27 +52,16 @@
             this.progressBar1.Size = new System.Drawing.Size(264, 23);
             this.progressBar1.TabIndex = 1;
             // 
-            // label4
+            // labelnfo
             // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(150, 304);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 37);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Exiting";
-            // 
-            // lblPercentage
-            // 
-            this.lblPercentage.BackColor = System.Drawing.Color.Transparent;
-            this.lblPercentage.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPercentage.ForeColor = System.Drawing.Color.White;
-            this.lblPercentage.Location = new System.Drawing.Point(425, 338);
-            this.lblPercentage.Name = "lblPercentage";
-            this.lblPercentage.Size = new System.Drawing.Size(72, 37);
-            this.lblPercentage.TabIndex = 3;
-            this.lblPercentage.Text = "20%";
+            this.labelnfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelnfo.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelnfo.ForeColor = System.Drawing.Color.White;
+            this.labelnfo.Location = new System.Drawing.Point(150, 304);
+            this.labelnfo.Name = "labelnfo";
+            this.labelnfo.Size = new System.Drawing.Size(154, 37);
+            this.labelnfo.TabIndex = 2;
+            this.labelnfo.Text = "Exiting";
             // 
             // Logout
             // 
@@ -81,8 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BookSellApplication.Properties.Resources.Screenshot_2024_12_02_134147;
             this.ClientSize = new System.Drawing.Size(683, 447);
-            this.Controls.Add(this.lblPercentage);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelnfo);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -98,7 +85,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblPercentage;
+        private System.Windows.Forms.Label labelnfo;
     }
 }

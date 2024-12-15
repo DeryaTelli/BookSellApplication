@@ -105,6 +105,7 @@ namespace BookSellApplication
             addUsers.Show();
         }
 
+
         private void button7_Click(object sender, EventArgs e)
         {
             panelNav.Height=btnLogout.Height;

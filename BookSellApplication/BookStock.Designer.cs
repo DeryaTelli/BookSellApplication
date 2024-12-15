@@ -92,7 +92,7 @@
             this.txSearch.BackColor = System.Drawing.Color.LightBlue;
             this.txSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.txSearch.ForeColor = System.Drawing.Color.Black;
             this.txSearch.Location = new System.Drawing.Point(304, 17);
             this.txSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSearch.Multiline = true;
@@ -104,6 +104,7 @@
             // 
             this.dataBookTable.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dataBookTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataBookTable.GridColor = System.Drawing.Color.Black;
             this.dataBookTable.Location = new System.Drawing.Point(11, 62);
             this.dataBookTable.Name = "dataBookTable";
             this.dataBookTable.RowHeadersWidth = 51;
@@ -221,7 +222,7 @@
             // 
             this.txBookName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txBookName.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txBookName.ForeColor = System.Drawing.Color.Silver;
+            this.txBookName.ForeColor = System.Drawing.Color.Black;
             this.txBookName.Location = new System.Drawing.Point(136, 20);
             this.txBookName.Name = "txBookName";
             this.txBookName.Size = new System.Drawing.Size(190, 20);
@@ -247,7 +248,7 @@
             // 
             this.txAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txAuthor.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txAuthor.ForeColor = System.Drawing.Color.Silver;
+            this.txAuthor.ForeColor = System.Drawing.Color.Black;
             this.txAuthor.Location = new System.Drawing.Point(136, 66);
             this.txAuthor.Name = "txAuthor";
             this.txAuthor.Size = new System.Drawing.Size(190, 20);
@@ -257,7 +258,7 @@
             // 
             this.txPageNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txPageNumber.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txPageNumber.ForeColor = System.Drawing.Color.Silver;
+            this.txPageNumber.ForeColor = System.Drawing.Color.Black;
             this.txPageNumber.Location = new System.Drawing.Point(137, 108);
             this.txPageNumber.Name = "txPageNumber";
             this.txPageNumber.Size = new System.Drawing.Size(47, 20);
@@ -287,7 +288,7 @@
             // 
             this.txPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txPrice.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txPrice.ForeColor = System.Drawing.Color.Silver;
+            this.txPrice.ForeColor = System.Drawing.Color.Black;
             this.txPrice.Location = new System.Drawing.Point(263, 109);
             this.txPrice.Name = "txPrice";
             this.txPrice.Size = new System.Drawing.Size(47, 20);
@@ -333,7 +334,7 @@
             // cbBookType
             // 
             this.cbBookType.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold);
-            this.cbBookType.ForeColor = System.Drawing.Color.Silver;
+            this.cbBookType.ForeColor = System.Drawing.Color.Black;
             this.cbBookType.FormattingEnabled = true;
             this.cbBookType.Items.AddRange(new object[] {
             "Fiction",
@@ -367,7 +368,7 @@
             // 
             this.txQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txQuantity.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txQuantity.ForeColor = System.Drawing.Color.Silver;
+            this.txQuantity.ForeColor = System.Drawing.Color.Black;
             this.txQuantity.Location = new System.Drawing.Point(437, 108);
             this.txQuantity.Name = "txQuantity";
             this.txQuantity.Size = new System.Drawing.Size(47, 20);

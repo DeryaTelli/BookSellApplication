@@ -137,7 +137,7 @@
             this.bunifuCircleProgress1.ProgressEndCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
             this.bunifuCircleProgress1.ProgressFillStyle = Bunifu.UI.WinForms.BunifuCircleProgress.FillStyles.Solid;
             this.bunifuCircleProgress1.ProgressStartCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
-            this.bunifuCircleProgress1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.bunifuCircleProgress1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bunifuCircleProgress1.Size = new System.Drawing.Size(151, 151);
             this.bunifuCircleProgress1.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.bunifuCircleProgress1.SubScriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
@@ -146,10 +146,9 @@
             this.bunifuCircleProgress1.SuperScriptMargin = new System.Windows.Forms.Padding(5, 8, 0, 0);
             this.bunifuCircleProgress1.SuperScriptText = "";
             this.bunifuCircleProgress1.TabIndex = 16;
-            this.bunifuCircleProgress1.Text = "30";
+            this.bunifuCircleProgress1.Text = "0";
             this.bunifuCircleProgress1.TextMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.bunifuCircleProgress1.Value = 30;
-            this.bunifuCircleProgress1.ValueByTransition = 30;
+            this.bunifuCircleProgress1.ValueByTransition = 0;
             this.bunifuCircleProgress1.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             // 
             // label5
@@ -167,6 +166,7 @@
             // 
             this.dataBookTable.BackgroundColor = System.Drawing.Color.BurlyWood;
             this.dataBookTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataBookTable.GridColor = System.Drawing.Color.Black;
             this.dataBookTable.Location = new System.Drawing.Point(25, 145);
             this.dataBookTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataBookTable.Name = "dataBookTable";
@@ -197,7 +197,7 @@
             this.txSearch.BackColor = System.Drawing.Color.LightBlue;
             this.txSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.txSearch.ForeColor = System.Drawing.Color.Black;
             this.txSearch.Location = new System.Drawing.Point(25, 96);
             this.txSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSearch.Multiline = true;

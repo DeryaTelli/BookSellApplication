@@ -127,7 +127,7 @@ namespace BookSellApplication
                 cbBookType.SelectedIndex = Convert.ToInt32(row.Cells["Book Type ID"].Value) - 1; // ComboBox'taki seçili kitabı göster
 
                 
-                   }
+            }
         }
 
         // Güncelleme butonunda verileri al ve güncelleme yap

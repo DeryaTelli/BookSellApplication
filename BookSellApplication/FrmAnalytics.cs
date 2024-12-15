@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScottPlot.Palettes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace BookSellApplication
@@ -55,9 +57,21 @@ namespace BookSellApplication
                         series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
                         series.IsValueShownAsLabel = true; // Değerleri etiket olarak göster
 
+                        // X ekseni ayarları: Etiketleri eğimli göster
+                        chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45; // Etiketleri 45 derece eğ
+                        chart1.ChartAreas[0].AxisX.LabelStyle.Font = new System.Drawing.Font(" Nirmala UI", 9, FontStyle.Bold); // Yazı tipi boyutunu ayarla
+                        chart1.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White; // X ekseni etiketlerinin rengini beyaz yap
+                        chart1.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White; // Y ekseni etiketlerinin rengini beyaz yap
+
+                        // X ekseni aralık ayarı
+                        chart1.ChartAreas[0].AxisX.Interval = 1;
+
                         // İsteğe bağlı olarak, grafik başlığını ekleyebilirsiniz
                         chart1.Titles.Clear();
-                        chart1.Titles.Add("Kitap Türlerine Göre Toplam Kitap Miktarları");
+                        chart1.Titles.Add("Total Book Amount by Book Types");
+                        // Grafik başlığı rengini beyaz yap
+                        chart1.Titles[0].ForeColor = Color.White;
+
                     }
                 }
                 catch (Exception ex)
@@ -67,7 +81,9 @@ namespace BookSellApplication
             }
         }
 
-       
+        private void FrmAnalytics_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
