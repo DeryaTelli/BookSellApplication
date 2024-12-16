@@ -30,14 +30,14 @@
         {
             this.btnSell = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.txQuantity = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txSearch = new System.Windows.Forms.TextBox();
             this.dataBookTable = new System.Windows.Forms.DataGridView();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txQuantity = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataBookTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +72,36 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(502, 275);
             this.panel9.TabIndex = 32;
+            // 
+            // txQuantity
+            // 
+            this.txQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txQuantity.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txQuantity.ForeColor = System.Drawing.Color.Black;
+            this.txQuantity.Location = new System.Drawing.Point(433, 235);
+            this.txQuantity.Name = "txQuantity";
+            this.txQuantity.Size = new System.Drawing.Size(47, 20);
+            this.txQuantity.TabIndex = 24;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Location = new System.Drawing.Point(433, 258);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(47, 1);
+            this.panel5.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(342, 235);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 20);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Quantity";
             // 
             // btnSearch
             // 
@@ -137,36 +167,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
-            // 
-            // txQuantity
-            // 
-            this.txQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txQuantity.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txQuantity.ForeColor = System.Drawing.Color.Black;
-            this.txQuantity.Location = new System.Drawing.Point(433, 235);
-            this.txQuantity.Name = "txQuantity";
-            this.txQuantity.Size = new System.Drawing.Size(47, 20);
-            this.txQuantity.TabIndex = 24;
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(433, 258);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(47, 1);
-            this.panel5.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(342, 235);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Quantity";
             // 
             // BookSell
             // 

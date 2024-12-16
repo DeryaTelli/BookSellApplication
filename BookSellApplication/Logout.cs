@@ -31,7 +31,7 @@ namespace BookSellApplication
             progressBar1.Value = progressValue;
 
             // Yüzde bilgisini Label'a yaz
-            labelnfo.Text = $"Loading... {progressValue}%";
+            labelnfo.Text = $"Exiting... {progressValue}%";
 
             // ProgressBar dolduğunda uygulamayı kapat
             if (progressValue >= 100)

@@ -357,6 +357,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\rb_2149330602.png" />
     <None Include="Resources\ledger_11771872 %281%291.png" />
     <None Include="Resources\ledger_11771872 %281%29.png" />
     <None Include="Resources\book_4715275 %281%29.png" />

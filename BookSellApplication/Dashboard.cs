@@ -5,73 +5,148 @@ using System.Windows.Forms;
 using Bunifu.UI.WinForms;
 using System.Drawing;
 
-
 namespace BookSellApplication
 {
     public partial class Dashboard : Form
     {
+
         private string connectionString = "Data Source=C:\\A-C#Dersleri\\BookSellApplication\\BookSellApplication\\library.db;Version=3;";
+        private double lastPercentage = 0;
 
         public Dashboard()
         {
             InitializeComponent();
             LoadBooks();
-            CalculateCircleProgress();
-            CalculateTotalEarnings();
-            
-            
+            lastPercentage = GetProgressFromDatabase(); // Veritabanından progress oranını al
+            if (lastPercentage == 0)
+            {
+                lastPercentage = 0; // Veritabanında 0 varsa, varsayılan olarak 0 ata
+            }
+            UpdatePercentageLabel(lastPercentage); // Label'ı güncelle
+            CalculateTotalEarnings(); // Toplam kazanç hesaplamayı yap
         }
 
-
-
-
-        private void CalculateCircleProgress()
+        private void UpdatePercentageLabel(double percentage)
         {
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            // Yüzdeyi 0-100 arasında sınırlamak
+            percentage = Math.Max(0, Math.Min(percentage, 100));
+
+            // lblPercentage'yi güncelle
+            lblPercentage.Text = $"{percentage:F1}%"; // Yüzdeyi düzgün şekilde yazdır
+        }
+
+        private void CalculateCircleProgressWeekly()
+        {
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
+            try
             {
-                try
+                connection.Open();
+                string query = @"
+            SELECT SUM(quantity) AS TotalBooksSold
+            FROM [Order] 
+            WHERE strftime('%Y-%W', orderDate) = strftime('%Y-%W', 'now')";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    connection.Open();
+                    object result = command.ExecuteScalar();
 
-                    // Bu ayın toplam kitap satış adedini hesaplayan SQL sorgusu
-                    string query = @"
-                SELECT COUNT(*) AS TotalBooksSold
-                FROM [Order] 
-                WHERE strftime('%Y-%m', orderDate) = strftime('%Y-%m', 'now')";
-
-                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    if (result != DBNull.Value && result != null)
                     {
-                        object result = command.ExecuteScalar();
+                        int totalBooksSold = Convert.ToInt32(result);
+                        int maxBooks = 50; // Maksimum hedef kitap sayısı
 
-                        if (result != DBNull.Value && result != null)
-                        {
-                            int totalBooksSold = Convert.ToInt32(result); // Bu ay satılan kitap sayısı
-                            int maxBooks = 500; // Maksimum kitap satış adedi (hedef)
+                        double percentage = (totalBooksSold / (double)maxBooks) * 100;
+                        lastPercentage = percentage; // Değeri sakla
 
-                            // Yüzdelik değeri hesaplama
-                            double percentage = (totalBooksSold / (double)maxBooks) * 100;
-
-                            // Progress bar özelliklerini ayarlama
-                            bunifuCircleProgress1.Maximum = 100; // Progress bar maksimum yüzde 100 olacak
-                            bunifuCircleProgress1.Value = (int)Math.Min(percentage, 100); // %100'ü aşmaz
-                            bunifuCircleProgress1.SubScriptText = " Kitap"; // Ekstra açıklama
-                            bunifuCircleProgress1.Text = $"{percentage:F1}%"; // Yüzdelik dilimi gösterir
-                        }
-                        else
-                        {
-                            MessageBox.Show("Bu ay için kayıtlı kitap satışı bulunmamaktadır.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            bunifuCircleProgress1.Value = 0;
-                            bunifuCircleProgress1.Text = "0%";
-                        }
+                        UpdatePercentageLabel(percentage); // Label'ı güncelle
+                        UpdateProgressInDatabase(percentage); // Veritabanını güncelle
+                    }
+                    else
+                    {
+                        lastPercentage = 0;
+                        UpdatePercentageLabel(0); // Label'ı 0 yap
+                        MessageBox.Show("There are no book sales registered for this week.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Circle Chart yüklenirken bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                    connection.Close();
             }
         }
 
+        private void UpdateProgressInDatabase(double percentage)
+        {
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
+            try
+            {
+                connection.Open();
+                string query = @"
+            INSERT OR REPLACE INTO Progress (id, percentage) 
+            VALUES (1, @percentage)"; // Veritabanında sadece bir satır olacak
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@percentage", percentage);
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating progress: {ex.Message}");
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                    connection.Close();
+            }
+        }
+
+        private double GetProgressFromDatabase()
+        {
+            double percentage = 0;
+
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
+            try
+            {
+                connection.Open();
+                string query = @"
+            SELECT percentage FROM Progress 
+            WHERE id = 1"; // Veritabanından kaydedilen değeri al
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        percentage = Convert.ToDouble(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error retrieving progress: {ex.Message}");
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
+                    connection.Close();
+            }
+
+            return percentage;
+        }
+
+        private void Dashboard_Activated(object sender, EventArgs e)
+        {
+            // Form aktif olduğunda progress bar'ı veritabanından al
+            lastPercentage = GetProgressFromDatabase();
+            UpdatePercentageLabel(lastPercentage); // Label'ı güncelle
+        }
 
         private void CalculateTotalEarnings()
         {
@@ -80,17 +155,15 @@ namespace BookSellApplication
                 try
                 {
                     connection.Open();
-                    // Bu ayın toplam satışlarını hesaplayan SQL sorgusu
                     string query = @"
-                SELECT SUM(price) AS TotalEarnings 
-                FROM [Order] 
-                WHERE strftime('%Y-%m', orderDate) = strftime('%Y-%m', 'now')";
+                    SELECT SUM(price) AS TotalEarnings 
+                    FROM [Order] 
+                    WHERE strftime('%Y-%m', orderDate) = strftime('%Y-%m', 'now')";
 
                     using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         object result = command.ExecuteScalar();
 
-                        // Eğer sonuç NULL değilse, toplam tutarı label'a yaz
                         if (result != DBNull.Value && result != null)
                         {
                             double totalEarnings = Convert.ToDouble(result);
@@ -108,10 +181,6 @@ namespace BookSellApplication
                 }
             }
         }
-
-
-
-        
 
         private void LoadBooks()
         {
@@ -183,5 +252,7 @@ namespace BookSellApplication
                 }
             }
         }
+
+       
     }
 }

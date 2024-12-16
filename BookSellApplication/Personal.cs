@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -22,11 +23,12 @@ namespace BookSellApplication
            int nBottomRect,
            int nWidthEllipse,
            int nHeightEllipse);
-
-        public Personal()
+       private string currentUserId;
+        public Personal(string userId)
         {
             InitializeComponent();
-           
+            currentUserId = userId;
+            
             this.Width = 900;
             this.Height = 450;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -51,7 +53,51 @@ namespace BookSellApplication
             dashboard.FormBorderStyle=FormBorderStyle.None;
             this.formPanel.Controls.Add(dashboard);
             dashboard.Show();
+            GetUserName();
         }
+
+        // Kullanıcının ismini almak için metod
+        private void GetUserName()
+        {
+            string connectionString = "Data Source=C:\\A-C#Dersleri\\BookSellApplication\\BookSellApplication\\library.db;Version=3;";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = @"
+                    SELECT name, surname
+                    FROM User
+                    WHERE userId = @userId";  // Kullanıcı ID'sine göre sorgu
+
+                    SQLiteCommand command = new SQLiteCommand(query, connection);
+                    command.Parameters.AddWithValue("@userId", currentUserId); // currentUserId: Form1'den alınan kullanıcı ID'si
+
+                    SQLiteDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read()) // Veritabanından kullanıcı bilgisi okunduysa
+                    {
+                        string firstName = reader["name"].ToString();
+                        string lastName = reader["surname"].ToString();
+
+                        // Kullanıcının ismini ve soyadını Label'a yazdıralım
+                        lblUserName.Text = $"{firstName} {lastName}"; // lblUserName: Kullanıcı ismini gösterecek Label
+                    }
+                    else
+                    {
+                        // Kullanıcı bulunamazsa
+                        lblUserName.Text = "User not found.";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while loading user data: {ex.Message}");
+                }
+            }
+        }
+
+
 
         private void btnBookStock_Click(object sender, EventArgs e)
         {

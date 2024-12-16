@@ -39,6 +39,7 @@ namespace BookSellApplication
             this.Height = 400; // Yükseklik
         }
 
+        // Form1'de giriş yapıldığında, kullanıcı adı ve şifreyi kontrol ediyoruz.
         private void button1_Click(object sender, EventArgs e)
         {
             if (loginAttempts == 0)
@@ -47,8 +48,8 @@ namespace BookSellApplication
                 Application.Exit();
             }
 
-            string connectionString = "Data Source=C:\\A-C#Dersleri\\BookSellApplication\\BookSellApplication\\library.db;Version=3;"; // SQLite veritabanı bağlantı yolu
-            string query = "SELECT authorityId FROM User WHERE userName = @userName AND password = @password";
+            string connectionString = "Data Source=C:\\A-C#Dersleri\\BookSellApplication\\BookSellApplication\\library.db;Version=3;";
+            string query = "SELECT authorityId, userId FROM User WHERE userName = @userName AND password = @password";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -60,21 +61,26 @@ namespace BookSellApplication
                         command.Parameters.AddWithValue("@userName", txUserName.Text);
                         command.Parameters.AddWithValue("@password", txPassword.Text);
 
-                        object result = command.ExecuteScalar();
+                        SQLiteDataReader reader = command.ExecuteReader();
 
-                        if (result != null)
+                        if (reader.Read())
                         {
-                            int authorityId = Convert.ToInt32(result);
+                            int authorityId = Convert.ToInt32(reader["authorityId"]);
+                            string userId = reader["userId"].ToString(); // Kullanıcının ID'sini al
+
+                            // Hata ayıklama: Kullanıcı ID'sini kontrol et
+                          //  MessageBox.Show($"User ID: {userId}");
 
                             switch (authorityId)
                             {
                                 case 1:
-                                    Form2 adminForm = new Form2(); // Yetki 1 için Form2
+                                    Form2 adminForm = new Form2(userId); // Kullanıcı ID'sini Form2'ye geçir
                                     adminForm.Show();
                                     break;
 
                                 case 2:
-                                    Personal personalForm = new Personal(); // Yetki 2 için Personal formu
+                                    
+                                    Personal personalForm = new Personal(userId); // userId'yi doğru şekilde geçir
                                     personalForm.Show();
                                     break;
 
@@ -97,6 +103,7 @@ namespace BookSellApplication
                 }
             }
         }
-       
+
+
     }
 }

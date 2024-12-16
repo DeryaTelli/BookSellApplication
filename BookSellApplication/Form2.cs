@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SQLite;
 
 namespace BookSellApplication
 {
@@ -22,9 +23,12 @@ namespace BookSellApplication
          int nWidthEllipse,
          int nHeightEllipse);
 
-        public Form2()
+        private string connectionString = "Data Source=C:\\A-C#Dersleri\\BookSellApplication\\BookSellApplication\\library.db;Version=3;";
+       
+        public Form2(string userId)
         {
             InitializeComponent();
+            currentUserId = userId;
             this.Width = 900;
             this.Height = 450;
             Region=System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -38,30 +42,55 @@ namespace BookSellApplication
             dashboard.FormBorderStyle=FormBorderStyle.None;
             this.pnlFormLoader.Controls.Add(dashboard);
             dashboard.Show();
+
+            GetUserName();
         }
-        private void Form2_Load(object sender, EventArgs e)
+
+        private string currentUserId;
+
+        // Kullanıcının ismini almak için metod
+        private void GetUserName()
         {
+            string connectionString = "Data Source=C:\\A-C#Dersleri\\BookSellApplication\\BookSellApplication\\library.db;Version=3;";
 
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = @"
+                    SELECT name, surname
+                    FROM User
+                    WHERE userId = @userId";  // Kullanıcı ID'sine göre sorgu
+
+                    SQLiteCommand command = new SQLiteCommand(query, connection);
+                    command.Parameters.AddWithValue("@userId", currentUserId); // currentUserId: Form1'den alınan kullanıcı ID'si
+
+                    SQLiteDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read()) // Veritabanından kullanıcı bilgisi okunduysa
+                    {
+                        string firstName = reader["name"].ToString();
+                        string lastName = reader["surname"].ToString();
+
+                        // Kullanıcının ismini ve soyadını Label'a yazdıralım
+                        lblUserName.Text = $"{firstName} {lastName}"; // lblUserName: Kullanıcı ismini gösterecek Label
+                    }
+                    else
+                    {
+                        // Kullanıcı bulunamazsa
+                        lblUserName.Text = "User not found.";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while loading user data: {ex.Message}");
+                }
+            }
         }
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
@@ -139,26 +168,7 @@ namespace BookSellApplication
            btnLogout.BackColor=Color.FromArgb(135, 206, 235);
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pnlFormLoader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             panelNav.Height=btnBookStock.Height;
@@ -177,29 +187,6 @@ namespace BookSellApplication
             btnBookStock.BackColor=Color.FromArgb(135, 206, 235);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelNav_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

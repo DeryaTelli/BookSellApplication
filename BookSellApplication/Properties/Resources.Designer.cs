@@ -303,6 +303,16 @@ namespace BookSellApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rb_2149330602 {
+            get {
+                object obj = ResourceManager.GetObject("rb_2149330602", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rb_2149330603 {
             get {
                 object obj = ResourceManager.GetObject("rb_2149330603", resourceCulture);

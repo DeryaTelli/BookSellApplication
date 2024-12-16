@@ -121,7 +121,7 @@ namespace BookSellApplication
                     // Eğer satış miktarı stoktan fazla ise uyarı veriyoruz
                     if (sellQuantity > currentQuantity)
                     {
-                        MessageBox.Show("Satış miktarı mevcut stoktan fazla olamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Sales quantity cannot be more than the available stock!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -166,19 +166,19 @@ namespace BookSellApplication
                     }
 
                     // Kullanıcıya başarı mesajı gösteriyoruz
-                    MessageBox.Show("Satış başarıyla gerçekleştirildi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("The sale was successful!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txQuantity.Text = "";
                     // DataGridView'i güncellemek için kitapları tekrar yükle
                     LoadBooks();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Lütfen bir kitap seçin!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a book!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         
 
